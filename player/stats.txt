@@ -1,0 +1,5 @@
+Health = 100
+Mana = 100
+Level = 1
+EXP = 0
+Intuition = 0

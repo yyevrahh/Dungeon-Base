@@ -6,8 +6,11 @@
 
 // Ubuntu, Ctrl + Shift + B in VSCode to run
 
+//yyevrahh: update tasks for compatibility, delete post-defined files, and other necessities for compatibility
+
 int main()
 {
+    clear_console();
     clear_console();
     char input[16];
     while (1)

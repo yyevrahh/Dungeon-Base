@@ -4,7 +4,18 @@
         {
             "label": "build and run",
             "type": "shell",
-            "command": "gcc main.c player.c port_handler.c -o game && ./game",
+            "linux": {
+                "command": "gcc main.c player.c port_handler.c -o main && ./main",
+            },
+            "windows": {
+                "command": "gcc main.c player.c port_handler.c -o main.exe && main.exe",
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": ["/c"]
+                    }
+                }
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true

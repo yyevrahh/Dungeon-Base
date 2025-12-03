@@ -27,7 +27,7 @@ void ensure_player_dir()
     {
         if (MAKE_DIR(dir_name) == 0)
         {
-            prints("Player data directory created.", 30);
+            prints("\n\tPlayer data directory created.", 30);
             printf("\n");
         }
         else
@@ -63,7 +63,7 @@ void init_player()
 
     if (fp_stat == NULL || fp_items == NULL)
     {
-        prints("cannot open file for writing, even after dir creation.", 50);
+        prints("\t\e[1;31mCannot open file for writing, even after dir creation.\e[0m", 50);
         printf("\n");
         fflush(stdout);
         sleep_ms(3000);
@@ -97,7 +97,7 @@ void see_stats()
 
     if (fp_stat == NULL)
     {
-        prints("FATAL: Could not open stats file for reading.", 30);
+        prints("\t\e[1;31mCould not open \e[1;37mstats file.\e[0m", 30);
         printf("\n");
         return;
     }
@@ -131,7 +131,7 @@ int get_health()
     FILE *fp = fopen(STAT_P, "r");
     if (fp == NULL)
     {
-        prints("FATAL: Could not open stats file for reading.", 30);
+        prints("\t\e[1;31mCould not open \e[1;37mstats file.\e[0m", 30);
         printf("\n");
         return -1;
     }
@@ -166,7 +166,7 @@ int get_mana()
     FILE *fp = fopen(STAT_P, "r");
     if (fp == NULL)
     {
-        prints("FATAL: Could not open stats file for reading.", 30);
+        prints("\t\e[1;31mCould not open \e[1;37mstats file.\e[0m", 30);
         printf("\n");
         return -1;
     }
@@ -201,7 +201,7 @@ int get_lvl()
     FILE *fp = fopen(STAT_P, "r");
     if (fp == NULL)
     {
-        prints("FATAL: Could not open stats file for reading.", 30);
+        prints("\t\e[1;31mCould not open \e[1;37mstats file.\e[0m", 30);
         printf("\n");
         return -1;
     }
@@ -236,7 +236,7 @@ int get_exp()
     FILE *fp = fopen(STAT_P, "r");
     if (fp == NULL)
     {
-        prints("FATAL: Could not open stats file for reading.", 30);
+        prints("\t\e[1;31mCould not open \e[1;37mstats file.\e[0m", 30);
         printf("\n");
         return -1;
     }
@@ -271,7 +271,7 @@ int get_intuition()
     FILE *fp = fopen(STAT_P, "r");
     if (fp == NULL)
     {
-        prints("FATAL: Could not open stats file for reading.", 30);
+        prints("\t\e[1;31mCould not open \e[1;37mstats file.\e[0m", 30);
         printf("\n");
         return -1;
     }

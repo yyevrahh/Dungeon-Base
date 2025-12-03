@@ -6,8 +6,6 @@
 
 // Ubuntu, Ctrl + Shift + B in VSCode to run
 
-//yyevrahh: update tasks for compatibility, delete post-defined files, and other necessities for compatibility
-
 int main()
 {
     clear_console();
